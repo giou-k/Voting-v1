@@ -1,0 +1,36 @@
+html
+	head
+		title= title
+		link(rel='stylesheet', type='text/css', href='css/app.css')
+		link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+	body
+		h1 #{title}
+		hr
+		hr
+		h2 Total cars
+
+		
+
+		.col-xs-12
+			.panel.panel-default
+				.panel-heading Cars Panel
+				.panel-body
+					table.table.table-bordered
+						thead
+							tr
+								th Car ID
+								th User
+								th Company
+								th Model
+								th Color
+						tbody
+							for car in totalCars
+								tr
+									td 
+										a(href='http://localhost:3000/cars/'+car.Key)= car.Key
+									td #{car.Record.owner}
+									td #{car.Record.make}
+									td #{car.Record.model}
+									td #{car.Record.colour}
+
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')

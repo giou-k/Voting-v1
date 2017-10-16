@@ -1,0 +1,61 @@
+
+#Marbles - Voting Notes
+
+
+----
+##lib.go
+* get_marble() - done
+* get_owner() - done
+* sanitize_arguments() - done
+
+
+----
+##marbles.go
+* structs - done
+* main() - done
+* Init() - done
+* Invoke() - done
+
+
+----
+##read_ledger.go
+* read() - done (read_voter, read_candidate)
+* read_everything() - read everything = get all voter and all candidates
+* getHistory() - reading complete history of a key/value -> gets history gia marbleid, exei transaction id variable kai value = get all the history for voter, returns (tokensBought, tokensUsedPerCandidate, tokensRemaining) with txid and get all the history for the candidate, returns votesreceived with txid = sumferei mono gia input vID.
+* getMarblesByRange() - reading a multiple key/values from the ledger -> na ginei getVotesperCandidate() kai/h na dinei return tou tokensUsedPerCandidate (kathws tha einai slice kai nmzw to slice thewreitai multiple key/value). <- lathos kathws to slice mporw na to kalesw me:
+> var voter Voter;
+> voterAsBytes, err := stub.GetState(vid);
+> json.Unmarshal(voterAsBytes, &voter);
+> fmt.Printf("", tokensUsedPerCandidate);
+
+  	px: key= tokensUsedPerCandidate / c1,c2,c5,c8,c13 opote 
+
+----
+##write_ledger.go
+* write() - not needed
+* delete_Marble() - done
+* init_Marble() - done
+* init_owner() - done
+* set_owner() - transfer func
+* disable_owner() - tha ginetai disable o voter otan den exei alla tokens gia vote  - done sthn transfer_vote kai sto init den xreiazetai elegxos gt pada yparxoun tokens ex orismou
+
+> ** With code input-output examples **
+
+----
+##marbles_cc_lib.js
+
+
+----
+##misc.js
+
+
+----
+##read_ledger.go
+
+
+----
+##read_ledger.go
+
+
+----
+##read_ledger.go

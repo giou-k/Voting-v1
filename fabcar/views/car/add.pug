@@ -1,0 +1,36 @@
+html
+	head
+		title= title
+		link(rel='stylesheet', type='text/css', href='css/app.css')
+		link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+	body
+		h1 #{title}
+		hr
+		hr
+
+		.col-xs-12
+			.panel.panel-default
+				.panel-heading Cars Panel
+				.panel-body
+					form(id="create-form" method="POST" action='/car/add')
+						.form-group
+							row
+								.col-md-6
+									label(for='carKey' class=) Car key
+									input#carKey.form-control(type='text' name="carKey")
+
+									label(for='carManufact' class=) Car Manufacturer
+									input#carManufact_input.form-control(type='text' name="carManufact")
+								.col-md-6
+									label(for='carColor' class=) Car Color
+									input#carColor_input.form-control(type='text' name="carColor")
+
+									label(for='carModel' class=) Car Model
+									input#carModel_input.form-control(type='text' name="carModel")
+						.form-group
+							button.btn.btn-primary(type='submit' id="AddButton") Add Item
+
+		
+
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+		

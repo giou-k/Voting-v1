@@ -1,0 +1,32 @@
+html
+	head
+		title= title
+		link(rel='stylesheet', type='text/css', href='css/app.css')
+		link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+	body
+		h1 #{title}
+		hr
+		hr
+
+		.col-xs-12
+			.panel.panel-default
+				.panel-heading Cars Panel
+				.panel-body
+					table.table.table-bordered
+						thead
+							tr
+								th Car ID
+								th User
+								th Company
+								th Model
+								th Color
+						tbody
+							tr
+								td #{carId}
+								td #{car.owner}
+								td #{car.make}
+								td #{car.model}
+								td #{car.colour}
+
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+		
